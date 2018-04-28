@@ -9,7 +9,7 @@
 |———config      # 配置项
 |
 |
-|———distNpm     # vue ui 组件库产出目录，用于发布 npm 包
+|———distNpm     # vue ui 组件库产出 ———> npm run build:preview，用于发布 npm 包
 |
 |
 |———distPreview # 预览项目产出 ———> npm run build:preview

@@ -1,0 +1,13 @@
+test-radius(n)
+	-webkit-border-radius n
+	-moz-border-radius n
+	border-radius n
+
+overflow-ellipsis(n = 1)
+	display: -webkit-box
+	box-orient: vertical
+	line-clamp: n // 可控制几行后有 ...
+	-webkit-line-clamp: n // 兼容写法
+	-webkit-box-orient: vertical
+	overflow: hidden
+	white-space: normal

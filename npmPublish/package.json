@@ -1,0 +1,21 @@
+{
+  "name": "vui-m",
+  "version": "0.0.21",
+  "description": "vue ui mobile",
+  "main": "dist/js/vui-m.js",
+  "keywords": [
+    "vue",
+    "ui"
+  ],
+  "author": "gauseen",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gauseen/vui-m.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gauseen/vui-m/issues"
+  },
+  "homepage": "https://github.com/gauseen/vui-m#readme",
+  "license": "ISC"
+}
+

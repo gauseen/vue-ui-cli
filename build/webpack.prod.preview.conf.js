@@ -17,7 +17,7 @@ const env = process.env.NODE_ENV === 'testing'
 
 const webpackConfig = merge(baseWebpackConfig, {
   entry: {
-    'vui-m': path.resolve(__dirname, '../preview/main.js'),
+    'vui-m': config.buildPreview.entryPath,
   },
   module: {
     rules: utils.styleLoaders({
@@ -67,9 +67,7 @@ const webpackConfig = merge(baseWebpackConfig, {
     // you can customize output by editing /index.html
     // see https://github.com/ampedandwired/html-webpack-plugin
     new HtmlWebpackPlugin({
-      filename: process.env.NODE_ENV === 'testing'
-        ? 'index.html'
-        : config.buildPreview.index,
+      filename: config.buildPreview.index,
       template: 'index.html',
       inject: true,
       favicon: './favicon.ico',

@@ -12,7 +12,7 @@ const config = require('../config')
 const shell = require('shelljs')
 const webpackConfig = require('./webpack.prod.npm.conf')
 
-const spinner = ora('building for production...')
+const spinner = ora('building for production npm pkg ...')
 spinner.start()
 
 rm(path.join(config.buildNpm.assetsRoot, config.buildNpm.assetsSubDirectory), err => {

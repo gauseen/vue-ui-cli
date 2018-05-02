@@ -11,13 +11,13 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {},
 
-    // Various Dev Server settings
-    host: 'localhost', // can be overwritten by process.env.HOST
-    port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
+    // development config
+    host: 'localhost',
+    port: 8080,
     autoOpenBrowser: false,
     errorOverlay: true,
     notifyOnErrors: true,
-    poll: false, // https://webpack.js.org/configuration/dev-server/#devserver-watchoptions-
+    poll: false,
 
     // https://webpack.js.org/configuration/devtool/#development
     devtool: 'cheap-module-eval-source-map',
@@ -30,26 +30,13 @@ module.exports = {
     cssSourceMap: true
   },
 
-  buildPublic: {
-    assetsSubDirectory: 'dist',
-    assetsPublicPath: '/',
-    entryPath: path.resolve(__dirname, '../src/index.js'),
-    productionSourceMap: false,
-  },
-
   buildPreview: {
-    // Template for index.html
     index: path.resolve(__dirname, '../distPreview/index.html'),
 
-    // Paths
     entryPath: path.resolve(__dirname, '../src/index.js'),
     assetsRoot: path.resolve(__dirname, '../distPreview'),
     assetsSubDirectory: 'dist',
-    assetsPublicPath: '/',
-
-    /**
-     * Source Maps
-     */
+    assetsPublicPath: '/vui-m/',
 
     productionSourceMap: false,
     devtool: '#source-map',
@@ -57,29 +44,20 @@ module.exports = {
     productionGzip: false,
     productionGzipExtensions: ['js', 'css'],
 
-    // `npm run build --report`
-    // Set to `true` or `false` to always turn it on or off
     bundleAnalyzerReport: process.env.npm_config_report
   },
 
   buildNpm: {
-    // Template for index.html
     index: path.resolve(__dirname, '../distNpm/index.html'),
 
-    // Paths
     entryPath: path.resolve(__dirname, '../src/index.js'),
     assetsRoot: path.resolve(__dirname, '../distNpm'),
     assetsSubDirectory: 'dist',
-    assetsPublicPath: '/',
 
     productionSourceMap: false,
     devtool: '#source-map',
 
     productionGzip: false,
     productionGzipExtensions: ['js', 'css'],
-
-    // `npm run build --report`
-    // Set to `true` or `false` to always turn it on or off
-    bundleAnalyzerReport: process.env.npm_config_report
   }
 }

@@ -12,7 +12,7 @@ const config = require('../config')
 const shell = require('shelljs')
 const webpackConfig = require('./webpack.prod.preview.conf')
 
-const spinner = ora('building for preview ...')
+const spinner = ora('building for production preview ...')
 spinner.start()
 
 rm(path.join(config.buildPreview.assetsRoot, config.buildPreview.assetsSubDirectory), err => {

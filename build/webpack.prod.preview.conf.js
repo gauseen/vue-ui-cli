@@ -24,7 +24,7 @@ const webpackConfig = merge(baseWebpackConfig, {
   devtool: config.buildPreview.productionSourceMap ? config.buildPreview.devtool : false,
   output: {
     path: config.buildPreview.assetsRoot,
-    publicPath: '/vui-m/',
+    publicPath: config.buildPreview.assetsPublicPath,
     filename: utils.assetsPath('js/[name].[chunkhash].js'),
     chunkFilename: utils.assetsPath('js/[id].[chunkhash].js')
   },

@@ -9,14 +9,12 @@ function resolve (dir) {
 }
 
 
-
 module.exports = {
   context: path.resolve(__dirname, '../'),
   entry: {
-    'vui-m': process.env.NODE_ENV === 'production'
-      ? config.buildPublic.entryPath
-      : config.dev.entryPath,
+    'vui-m': utils.getEntryPath(),
   },
+
   resolve: {
     extensions: ['.js', '.vue', '.json', '.styl'],
     alias: {

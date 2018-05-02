@@ -5,11 +5,25 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const packageConfig = require('../package.json')
 
 exports.assetsPath = function (_path) {
-  const assetsSubDirectory = process.env.NODE_ENV === 'production'
-    ? config.buildPublic.assetsSubDirectory
-    : config.dev.assetsSubDirectory
+  let assetsSubDirectory = getEnvConfig('assetsSubDirectory')
 
   return path.posix.join(assetsSubDirectory, _path)
+}
+
+exports.getEntryPath = function () {
+  return getEnvConfig('entryPath')
+}
+
+function getEnvConfig(key) {
+  let _nodeEnv = process.env.NODE_ENV
+
+  if (_nodeEnv === 'prodPreview') {
+   return config.buildPreview[key]
+  } else if (_nodeEnv === 'prodNpm') {
+    return config.buildNpm[key]
+  } else {
+    return config.dev[key]
+  }
 }
 
 exports.cssLoaders = function (options) {
